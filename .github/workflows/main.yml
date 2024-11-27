@@ -29,6 +29,9 @@ jobs:
       - name: Run circle tests
         run: |
           python circle.py
+      - name: Run triangle tests
+        run: |
+          python triangle.py
           
   build-windows:
     runs-on: windows-latest
