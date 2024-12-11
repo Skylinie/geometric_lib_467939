@@ -3,7 +3,7 @@ name: CI
 on:
   push:
     branches:
-      - new_features_467939;
+      - new_features_467939
 
 jobs:
   build-ubuntu:
@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2]4
+        uses: actions/checkout@v2
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -29,6 +29,7 @@ jobs:
       - name: Run circle tests
         run: |
           python circle.py
+          
       - name: Run triangle tests
         run: |
           python triangle.py
@@ -38,10 +39,10 @@ jobs:
 
     steps:
       - name: Checkout code
-      - uses: actions/checkout@v4
+        uses: actions/checkout@v2
 
-      - name: Python
-      - uses: actions/setup-python@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
         with:
           python-version: '3.12'
 
